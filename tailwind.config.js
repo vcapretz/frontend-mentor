@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ["Outfit", "sans-serif"],
+        big: ["Big Shoulders Display", "cursive"],
+        lexend: ["Lexend Deca", "sans-serif"],
       },
     },
   },
