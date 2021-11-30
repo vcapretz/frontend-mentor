@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nft-link:before {
+  @apply rounded-lg block w-full h-full absolute opacity-0 inset-0 z-10 bg-center bg-no-repeat;
+
+  content: "";
+
+  background-image: url("/nft-preview-card-component/icon-view.svg");
+  background-size: 3rem;
+  background-color: hsla(178, 100%, 50%, 90%);
+  transition: opacity 0.2s ease;
+}
+
+.nft-link {
+  @apply relative flex cursor-pointer;
+}
+
+.nft-link:hover:before {
+  @apply opacity-100;
+}

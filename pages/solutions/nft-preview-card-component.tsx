@@ -20,20 +20,6 @@ const EthereumIcon = () => (
   </svg>
 );
 
-const ViewIcon = () => (
-  <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fillRule="evenodd">
-      <path d="M0 0h48v48H0z" />
-
-      <path
-        d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z"
-        fill="#FFF"
-        fillRule="nonzero"
-      />
-    </g>
-  </svg>
-);
-
 export default function NftPreviewCard() {
   return (
     <div className="bg-[#0d192b] flex justify-center items-center min-h-screen w-full font-display">
@@ -51,7 +37,7 @@ export default function NftPreviewCard() {
       </Head>
 
       <div className="bg-[#14253d] rounded-xl p-6 max-w-xs">
-        <div className="relative flex cursor-pointer">
+        <a href="#" className="nft-link">
           <Image
             src="/nft-preview-card-component/image-equilibrium.jpg"
             width={604}
@@ -59,11 +45,7 @@ export default function NftPreviewCard() {
             alt="Equilibrium #3429"
             className="rounded-lg"
           />
-
-          <div className="absolute rounded-lg flex items-center justify-center opacity-0 bg-[#00fff7] transition-all top-0 left-0 right-0 bottom-0 hover:opacity-90">
-            <ViewIcon />
-          </div>
-        </div>
+        </a>
 
         <a className="text-white hover:text-[#00fff7] cursor-pointer">
           <h2 className="font-semibold text-lg mt-4">Equilibrium #3429</h2>
