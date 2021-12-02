@@ -20,3 +20,63 @@
 .nft-link:hover:before {
   @apply opacity-100;
 }
+
+.faq-input + label + .faq-content {
+  @apply opacity-0 h-0 transition-all pb-0;
+}
+
+.faq-input:checked + label {
+  @apply font-bold;
+}
+
+.faq-input + label > svg {
+  @apply rotate-0 transition-all;
+}
+
+.faq-input:checked + label > svg {
+  @apply rotate-180;
+}
+
+.faq-input:checked + label + .faq-content {
+  height: fit-content;
+  opacity: 1;
+  @apply pb-4;
+}
+
+.faq-container {
+  @apply bg-white rounded-3xl flex flex-col p-4 justify-center items-center mx-6 max-w-5xl relative pt-32;
+}
+
+.faq-questions::before {
+  @apply block w-[80%] h-1/2 absolute top-[-25%] bg-center bg-no-repeat;
+  content: "";
+
+  background-image: url("/faq-accordion-card/illustration-woman-online-mobile.svg");
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    @apply grid grid-cols-2 p-0 pr-10 overflow-hidden pt-0;
+  }
+
+  .faq-wrapper::after {
+    @apply block w-3/12 h-48 absolute inset-0 bg-center bg-no-repeat left-[-10%] z-20 top-[36%];
+    content: "";
+
+    background-image: url("/faq-accordion-card/illustration-box-desktop.svg");
+  }
+
+  .faq-questions::before {
+    @apply block w-full h-full absolute inset-0 bg-center bg-no-repeat left-[-60%];
+    content: "";
+
+    background-image: url("/faq-accordion-card/bg-pattern-desktop.svg");
+  }
+
+  .faq-questions::after {
+    @apply block w-full h-full absolute inset-0 bg-right bg-no-repeat left-[-62%];
+    content: "";
+
+    background-image: url("/faq-accordion-card/illustration-woman-online-desktop.svg");
+  }
+}
